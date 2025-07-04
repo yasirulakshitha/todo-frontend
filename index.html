@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="main.js" defer></script>
+
+    
+</head>
+<body class="bg-gray-100 text-black min-h-screen flex items-center justify-center">
+
+    <div class="bg-white p-6 rounded shadow-lg w-full max-w-lg min-h-[600px]">
+        <h1 class="text-2xl font-bold mb-4 text-center">ToDo App</h1>
+
+        <div class="flex justify-center gap-2 mb-4">
+          <button onclick="setFilter('all')" id="filter-all"
+                  class="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">
+            All
+          </button>
+          <button onclick="setFilter('completed')" id="filter-completed"
+                  class="px-3 py-1 bg-gray-300 text-gray-800 rounded hover:bg-green-400">
+            Completed
+          </button>
+          <button onclick="setFilter('incomplete')" id="filter-incomplete"
+                  class="px-3 py-1 bg-gray-300 text-gray-800 rounded hover:bg-yellow-300">
+            Incomplete
+          </button>
+        </div>
+
+        <div class="flex mb-4">
+          <input id="todoInput" type="text" placeholder="Add new todo..."
+                 class="flex-grow border border-gray-300 px-3 py-2 rounded-l" />
+          <input id="dateInput" type="date"
+                 class="border border-gray-300 px-2 py-2" />
+          <button onclick="addTodo()"
+                  class="bg-blue-500 text-white px-4 py-2 rounded-r hover:bg-blue-600">
+            Add
+          </button>
+        </div>
+
+        <div id="progressContainer" class="mb-4">
+          <p id="progressText" class="text-sm mb-1 text-gray-700 font-medium"></p>
+          <div class="w-full bg-gray-300 rounded-full h-3">
+            <div id="progressBar" class="bg-green-500 h-3 rounded-full" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <ul id="todoList" class="space-y-2"></ul>
+    </div>
+
+</body>
+</html>
