@@ -73,12 +73,12 @@ async function loadTodos() {
 
     // Edit button to enable editing
     const editBtn = document.createElement("button");
-    editBtn.textContent = "edit";
+    editBtn.textContent = "✏️";
     editBtn.className = "hover:text-blue-600";
 
     // Save button (hidden by default)
     const saveBtn = document.createElement("button");
-    saveBtn.textContent = "save";
+    saveBtn.textContent = "💾";
     saveBtn.className = "hover:text-green-600 hidden";
 
     // When edit is clicked: enable input and show save
